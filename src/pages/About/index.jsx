@@ -1,8 +1,10 @@
-import React from 'react'
+import imgAboutBanner from "../../assets/imgBannerAbout.png";
+import Banner from '../../components/Banner'
 
 function About() {
     return(
-        <h1>About </h1>
+        <Banner img={imgAboutBanner} />
+      
     )   
 }
 export default About

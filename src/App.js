@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Accommodation from './pages/Accommodation'
+import Header from './components/Header'
 import Error from './pages/Error'
 
 function App() {
   return (
     <Router>
+       <Header/>
       <Routes>
+       
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Accommodation" element={<Accommodation />} />
