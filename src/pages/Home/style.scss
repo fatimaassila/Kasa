@@ -1,0 +1,10 @@
+// rgba(242, 242, 242, 0.872); 
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgba(242, 242, 242, 0.872);
+    padding: 50px;
+    border-radius: 25px;
+    margin:30px;
+    gap: 50px;
+}

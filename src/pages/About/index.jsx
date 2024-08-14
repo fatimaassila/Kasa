@@ -16,7 +16,7 @@ const aboutDatas = [
     {
         "id": "3",
         "title": "Service",
-        "content": "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.."
+        "content": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.."
     },
     {
         "id": "4",
@@ -28,7 +28,7 @@ function About() {
     return(
         <div>
             <Banner img={imgAboutBanner} />
-            <div className='card-container'>
+            <div className='collapse-container'>
              {aboutDatas.map((data, index) => (
               <Collapse
                key={`${data.id}-${index}`}

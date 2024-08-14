@@ -1,33 +1,35 @@
-$primary-color:rgb(217, 90, 117);
+
 $font-size-medium: 13px;
 .card {
     position: relative;
-    width: 340px;
+    width: 30%;
     height: 340px;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
     transition : box-shadow 0.2s ease-in-out;
-    background-color: $primary-color;
-    
     img {
         width: 100%;
-        height: 280px;
+        height:340px;
         object-fit: cover;
         object-position: center;   
     }
     .card_title{
-        margin-left: 5px;
+        position:absolute;
+        bottom: 20px;
+        left:10px;
+        right: 20px;
+        font-weight: 500;
         font-size:$font-size-medium;
         color: white;
-        margin-top: 0px;
-        margin-bottom:5px;
     }
     .text{
-        margin-left:5px;
+        position:absolute;
+        bottom: 1px;
+        left:10px;
+        right: 20px;
+        font-weight: 500;
         font-size:$font-size-medium;
-        color: white;
-        margin-top: 5px;
-        font-weight: bold;
+        color: white;      
     }
 }
