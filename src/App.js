@@ -6,6 +6,7 @@ import Accommodation from './pages/Accommodation'
 import Header from './components/Header'
 import Error from './pages/Error'
 
+
 function App() {
   return (
     <Router>
