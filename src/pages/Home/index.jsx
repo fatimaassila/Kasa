@@ -9,22 +9,18 @@ function Home() {
   return (   
   <div >
     <Banner title="Chez vous, partout et ailleurs" img={imgHomeBanner} />
-    
-     {data.map((data, index) => (
-      <Link  to={`/Accommodation/${data.id}`} className='card-container'>
+    <div className='card-container'>
+    {data.map((data, index) => (
+      <Link  key={data.id} to={`/Accommodation/${data.id}`} className='link'>
        <Card
-      key={`${data.id}-${index}`}
-      img={data.cover}
-      title={data.title}
-      location={data.location}
-      />
+       img={data.cover}
+       title={data.title}
+       location={data.location}
+       />
        </Link>
       ))}
-   
+    </div>
    </div>
   )
 }
-
 export default Home
-
-// {`'/Accommodation/${data.id}`}

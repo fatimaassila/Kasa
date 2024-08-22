@@ -1,10 +1,16 @@
 $font-size-base: 19px;
 .collapse {
   border-radius:10px;
-  margin: 0px 150px 20px 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
   width:70%;
+  
+  .collapse-content{
+    display:flex;
+    justify-content: center;
+  }
   .description {
       background-color:rgb(166 161 161 / 13%);
       color:black;
@@ -16,7 +22,7 @@ $font-size-base: 19px;
     justify-content: space-between;
     align-items: center;
     padding:10px 10px 10px 20px;
-    background-color:rgb(255 82 83 / 79%);
+    background-color:#FF6060;
     height: 25px;
     
    .title {
@@ -30,7 +36,7 @@ $font-size-base: 19px;
       cursor: pointer;
       font-size: 25px;
       color:white;
-      transition: transform 0.1s ease;
+      transition: transform 0.3s ease;
       transform-origin: center;
     }
   } 

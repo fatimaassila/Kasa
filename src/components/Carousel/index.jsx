@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react'
 
-
-function Carrousel({imageSlider}) {
+function Carousel({imageSlider}) {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const length = imageSlider.length; //longueur du tableau de slides
 
     const nextSlide = () => {
         setCurrentIndex(currentIndex + 1)
@@ -20,23 +20,29 @@ function Carrousel({imageSlider}) {
     }
 
     return (
+       
         <div style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className='carousel'>
             {imageSlider.length > 1 && 
                 <>
                     <FontAwesomeIcon 
-                        icon={faChevronRight} 
+                        icon= {faChevronLeft}
                         className='carousel-arrow_right' 
-                        onClick={nextSlide} 
-                    />
-                    <FontAwesomeIcon 
-                        icon={faChevronLeft} 
-                        className='carousel_arrow_left' 
                         onClick={prevSlide} 
                     />
-                    
+                    <FontAwesomeIcon 
+                        icon= {faChevronRight}
+                        className='carousel_arrow_left' 
+                        onClick={nextSlide} 
+                    />
+                    <span className="number">
+                     {currentIndex + 1}/{length}
+                    </span>
+
                 </>
             } 
         </div>
+        
+       
     )
 }
-export default Carrousel
+export default Carousel

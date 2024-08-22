@@ -1,6 +1,7 @@
 import imgAboutBanner from "../../assets/imgBannerAbout.png";
 import Banner from '../../components/Banner'
 import Collapse from "../../components/Collapse";
+import './style.scss'
 
 const aboutDatas = [
     {
@@ -28,7 +29,7 @@ function About() {
     return(
         <div>
             <Banner img={imgAboutBanner} />
-            <div className='collapse-container'>
+            <div className='collapse-about'>
              {aboutDatas.map((data, index) => (
               <Collapse
                key={`${data.id}-${index}`}

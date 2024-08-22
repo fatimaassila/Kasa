@@ -1,7 +1,13 @@
-import Carrousel from "../../components/Carrousel"
+import './style.scss'
+import Carousel from "../../components/Carousel"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import data from '../../data/data.json'
+import Error from "../../pages/Error"
+ import Tag from "../../components/Tag"
+ import Rate from '../../components/Rate'
+import Collapse from "../../components/Collapse"
+
 
 function Accommodation () {
     const [imageSlider, setImageSlider] = useState([]);
@@ -15,10 +21,51 @@ function Accommodation () {
             setImageSlider(dataCurrentAccommodation.pictures);
         }
     }, [id, dataCurrentAccommodation]);
+
+    if (!dataCurrentAccommodation) {
+		return <Error/>;
+	}
     
     return(
-       <div > 
-			<Carrousel imageSlider={imageSlider} />
+       <div className="accommodation"> 
+			<Carousel imageSlider={imageSlider} />
+            <div className="container">
+                <div>
+                 <h1>{dataCurrentAccommodation.title}</h1>
+                 <p>{dataCurrentAccommodation.location}</p>
+                </div>
+    
+                <div className="host">
+                 <p>{dataCurrentAccommodation.host.name}</p>
+                 <img src= {dataCurrentAccommodation.host.picture}/>
+                </div>
+            </div>
+
+            <div className='tag-rate-container'>
+                <div className='tags'>
+                 {dataCurrentAccommodation.tags.map((tag, index) => 
+				 <Tag key={index} tag={tag}/>
+				 )}			
+				</div>
+                <Rate score={dataCurrentAccommodation.rating} />
+            </div>
+
+            <div className='collapse-container'>
+                <Collapse
+                 title={'Description'}
+                 content={dataCurrentAccommodation.description}
+                />
+                <Collapse
+                  title={'Equipments'}
+                  content={
+                    <ul>
+                      {dataCurrentAccommodation.equipments.map((equipment, index) => (
+                     <li key={index}>{equipment}</li>
+                      ))}
+                    </ul>
+                    }
+                />
+            </div>
         </div>
     )   
 }
