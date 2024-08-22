@@ -8,22 +8,50 @@
     margin:5px;
     color:#FF6060;
     font-size:288px;
-   font-weight:700
+   font-weight:700;
+
+  @media screen and (max-width: 768px){
+     font-size:200px;
+    }
+  @media screen and (max-width: 375px){
+   font-size:96px;
+  }
    }
    .error-txt{
     color: #FF6060;
     font-size: 36px;
     font-weight:500;
     margin-top: 0px;
-    margin-bottom:50px
+    margin-bottom:50px;
+    @media screen and (max-width: 768px){
+      font-size:20px;
+     }
+   @media screen and (max-width: 375px){
+    font-size:16px;
+    text-align: center;
+    .break {
+      // /* Force le retour à la ligne */
+      display: block; 
+      // /* Ajuste l'espacement des lignes */
+      line-height: 1.5;
+    }
+   }
    }
    .redirection{
     color: black;
     font-size:18px;
     text-decoration: none;
+    font-weight: 500;
+    
     &:hover,
     &:focus {
       text-decoration-line: underline;
     }
+    @media screen and (max-width: 768px){
+      font-size:16px;
+     }
+   @media screen and (max-width: 375px){
+    font-size:14px;
+   }
    }
 }

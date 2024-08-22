@@ -27,27 +27,34 @@ function Accommodation () {
 	}
     
     return(
-       <div className="accommodation"> 
+        <div className="accommodation"> 
 			<Carousel imageSlider={imageSlider} />
-            <div className="container">
-                <div>
-                 <h1>{dataCurrentAccommodation.title}</h1>
-                 <p>{dataCurrentAccommodation.location}</p>
-                </div>
-    
-                <div className="host">
-                 <p>{dataCurrentAccommodation.host.name}</p>
-                 <img src= {dataCurrentAccommodation.host.picture}/>
-                </div>
-            </div>
 
-            <div className='tag-rate-container'>
-                <div className='tags'>
-                 {dataCurrentAccommodation.tags.map((tag, index) => 
-				 <Tag key={index} tag={tag}/>
-				 )}			
-				</div>
-                <Rate score={dataCurrentAccommodation.rating} />
+            <div className="container">
+                <div className='info-container'>
+                    <div className='title-location'>
+                      <h1>{dataCurrentAccommodation.title}</h1>
+                      <p>{dataCurrentAccommodation.location}</p>
+                    </div>
+
+                    <div className='tags'>
+                      {dataCurrentAccommodation.tags.map((tag, index) => 
+				       <Tag key={index} tag={tag}/>
+				       )}			
+				    </div> 
+                </div>
+
+                <div className='host-tag'>
+                    
+                    <div className="host">
+                      <p>{dataCurrentAccommodation.host.name}</p>
+                      <img src= {dataCurrentAccommodation.host.picture}/>
+                    </div>
+                    
+                    <div className='rate'>
+                     <Rate score={dataCurrentAccommodation.rating} />
+                    </div>
+                </div>
             </div>
 
             <div className='collapse-container'>

@@ -6,7 +6,9 @@ function Error() {
     return(
         <div className='error-container'>
          <h3 className='not-found'>404 </h3>
-         <p className='error-txt'> Oups! La page que vous demandez n'existe pas.</p>
+         <p className='error-txt'>
+         Oups! La page que <span className="break">vous demandez n'existe pas</span>.
+         </p>
          <Link to="/" className='redirection'>
           Retourner sur la page d'accueil
         </Link>

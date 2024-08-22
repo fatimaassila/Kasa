@@ -1,6 +1,6 @@
 .carousel {
     position: relative;
-    width: 95%;
+    width: 100%;
     height: 415px; 
     background-size: cover;
     background-position: center;
@@ -9,12 +9,24 @@
     align-items: center;
     justify-content:space-between;
     border-radius: 25px;
-    margin: 0px 30px 20px 30px;
     background-repeat: no-repeat;
+    @media screen and (max-width: 768px){
+     height: 350px;
+    }
+    @media screen and (max-width: 375px){
+     height: 255px;
+    }
     .svg-inline--fa{
     font-size: 6rem; 
     color: white; 
     cursor: pointer;
+    margin: 10px;
+    @media screen and (max-width: 768px){
+      font-size:3rem; 
+    }
+    @media screen and (max-width: 375px){
+      font-size: 1.5rem; 
+     }
     }
     .number{
       position: absolute;
@@ -23,7 +35,9 @@
       font-size:15px;
       color:white;
       padding: 15px;
-     
+      @media screen and (max-width: 768px){
+        display: none;
+       }  
     }
   }
   
