@@ -1,5 +1,5 @@
 import './style.scss'
-import Carousel from "../../components/Carousel"
+import Carousel from "../../components/Gallery"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import data from '../../data/data.json'
