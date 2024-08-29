@@ -1,5 +1,5 @@
+@import '../../utils/all.scss';
 
-$font-size-medium: 13px;
 .card {
     position: relative;
     border-radius: 10px;
@@ -19,20 +19,26 @@ $font-size-medium: 13px;
 }
 .card_title{
     position:absolute;
-    bottom: 20px;
+    bottom: 25px;
     left:10px;
     right: 20px;
     font-weight: 500;
     font-size:$font-size-medium;
-    color: white;
+    color: $tertiary-color;
+    @media screen and (max-width: 375px){
+      font-size:$font-size-small
+    }
 }
 .text{
     position:absolute;
-    bottom: 1px;
+    bottom: 10px;
     left:10px;
     right: 20px;
     font-weight: 500;
     font-size:$font-size-medium;
-    color: white;      
+    color:$tertiary-color;   
+    @media screen and (max-width: 375px){
+      font-size:$font-size-small
+    }   
 }
 }

@@ -1,27 +1,30 @@
+@import '../../utils/all.scss';
+
 .footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, center,center);
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
     gap:30px;
     width: 100%;
     height:209px;
-    background-color: black;
+    background-color: $secondary-dark;
     margin-top:15px;
     img{
         height:39.44px;
         width: 122px; 
     }
     &-copyright{
-        color:white;
-        font-size:24px;
+        color:$primary-color;
+        font-size:$font-size-large;
         font-weight: 500;
         @media screen and (max-width: 768px){
-            font-size:16px;
+            font-size:$font-size-secondary-base;
             text-align: center;
         }
         @media screen and (max-width: 375px){
-           font-size:12px;
+           font-size:$font-size-secondary-medium;
             width: 115px;
         }
     }

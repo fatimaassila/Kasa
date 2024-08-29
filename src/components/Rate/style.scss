@@ -1,11 +1,12 @@
+@import '../../utils/all.scss';
 .rate-container {
     display: flex;
     align-items: center;
     .svg-inline--fa{
-      font-size:20px; 
+      font-size:$font-size-base; 
       margin: 0 5px; 
       @media screen and (max-width: 375px){
-       font-size:14px;         
+       font-size:$font-size-medium;         
       }
     }
   }

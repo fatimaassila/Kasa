@@ -1,4 +1,4 @@
-$font-size-base: 19px;
+@import '../../utils/all.scss';
 .collapse {
   border-radius:10px;
   margin-top: 15px;
@@ -14,20 +14,21 @@ $font-size-base: 19px;
     justify-content: center;
   }
   .description {
-    background-color:#F6F6F6;
-    color:black;
+    background-color:$primary-color;
+    color: $secondary-dark;
     font-size:$font-size-base;
-    padding:5px 5px 5px 20px;  
+    padding:5px 5px 15px 20px;  
     @media screen and (max-width: 375px){
-      font-size:13px;   
+      font-size:$font-size-medium;   
     }
   }
   .collapse-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:10px 10px 10px 20px;
-    background-color:#FF6060;
+    @include flex-space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    padding: 20px;
+    background-color:$secondary-color;
     height: 25px;
     @media screen and (max-width: 375px){
       padding:5px 5px 5px 20px;
@@ -36,20 +37,20 @@ $font-size-base: 19px;
       font-size:$font-size-base;
       font-weight: 600;
       margin: 0;
-      color:white;
+      color:$primary-color;
       @media screen and (max-width: 375px){
-        font-size: 13px;
+        font-size:$font-size-medium;
       }
     }
     .svg-inline--fa {
       margin-left: 10px;
       cursor: pointer;
-      font-size: 25px;
-      color:white;
+      font-size: $font-size-large;
+      color:$primary-color;
       transition: transform 0.3s ease;
       transform-origin: center;
       @media screen and (max-width: 375px){
-        font-size: 18px
+        font-size:$font-size-base
       }
     }
   } 

@@ -1,33 +1,37 @@
+@import '../../utils/all.scss';
 .error-container{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+  @include flex(column, center,center);
+    // display: flex;
+    // flex-direction:column;
+    // justify-content: center;
+    // align-items: center;
     font-family:"Montserrat";
    .not-found{
     margin:5px;
-    color:#FF6060;
-    font-size:288px;
+    color:$secondary-color;
+    font-size:$font-size-xxxlarge;
    font-weight:700;
+   margin-top: 50px;
+   margin-bottom: 20px;
 
   @media screen and (max-width: 768px){
      font-size:200px;
     }
   @media screen and (max-width: 375px){
-   font-size:96px;
+   font-size:$font-size-xxlarge;
   }
    }
    .error-txt{
-    color: #FF6060;
-    font-size: 36px;
+    color:$secondary-color;
+    font-size:$font-size-secondary-xlarge;
     font-weight:500;
-    margin-top: 0px;
-    margin-bottom:50px;
+    margin-top: 20px;
+   margin-bottom: 50px;
     @media screen and (max-width: 768px){
-      font-size:20px;
+      font-size:$font-size-base;
      }
    @media screen and (max-width: 375px){
-    font-size:16px;
+    font-size:$font-size-secondary-base;
     text-align: center;
     .break {
       // /* Force le retour à la ligne */
@@ -38,20 +42,22 @@
    }
    }
    .redirection{
-    color: black;
-    font-size:18px;
+    color:$secondary-dark;
+    font-size:$font-size-base;
     text-decoration: none;
     font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 50px;
     
     &:hover,
     &:focus {
       text-decoration-line: underline;
     }
     @media screen and (max-width: 768px){
-      font-size:16px;
+      font-size:$font-size-secondary-base;
      }
    @media screen and (max-width: 375px){
-    font-size:14px;
+    font-size:$font-size-medium;
    }
    }
 }

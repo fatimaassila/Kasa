@@ -1,6 +1,8 @@
+@import '../../utils/all.scss';
 .accommodation{
-  display: flex;
- flex-direction: column;
+    @include flex-column;
+//   display: flex;
+//  flex-direction: column;
 //  font-family:"Montserrat";
  margin: 30px;
     @media screen and (max-width: 768px){
@@ -10,37 +12,39 @@
      margin: 15px;
     }
  .container{
-    font-size: 24px;
+    font-size: $font-size-large;
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
     @media screen and (max-width: 375px){
         flex-direction: column;
         align-items:normal;  
     }
     .info-container{
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
+        // display: flex;
+        // flex-direction: column;
         font-family:"Montserrat";
         h1{
-            font-size: 36px;
+            font-size:$font-size-secondary-xlarge;
             margin: 0px;
-            color: #FF6060;
+            color: $secondary-color;
             font-weight: 500; 
             padding-bottom: 10px;
             @media screen and (max-width: 375px){
-               font-size: 18px; 
+               font-size:$font-size-base; 
                padding: 5px;
             }   
         }
         p{
-            font-size: 18px;
+            font-size:$font-size-base;
             margin: 0px;
-            color:black;
+            color:$secondary-dark;
             font-weight: 500; 
             @media screen and (max-width: 375px){
-                font-size: 14px; 
+                font-size:$font-size-medium; 
             }   
         }
         .tags{
@@ -49,12 +53,12 @@
                 margin-top: 0px;
             }
             button{
-                background-color: #FF6060;
-                color: white;
+                background-color:$secondary-color;
+                color:$primary-color;
                 border-radius:10px;
                 border-color:transparent; 
                 cursor: pointer;
-                font-size:14px;
+                font-size:$font-size-medium;
                 font-weight: 700;    
                 margin:0px 20px 0px 0px;
                 font-family:"Montserrat";
@@ -64,35 +68,38 @@
                   padding: 2px;
                   margin-top: 5px;
                  margin:0px 10px 0px 0px;
-                 font-size:10px;
+                 font-size:$font-size-small;
                 }
             }
         }
     }
     .host-tag{
-     display: flex;
-     flex-direction: column;
+        @include flex-column;
+    //  display: flex;
+    //  flex-direction: column;
        @media screen and (max-width: 375px){
          flex-direction:row-reverse;
          justify-content: space-between;
          align-items: center;
+         margin-top: 10px;
         }
         .host{
-           display: flex;
-           align-items: center;
-           justify-content: end;
+            @include flex-end;
+        //    display: flex;
+        //    align-items: center;
+        //    justify-content: end;
            gap: 10px;
             @media screen and (max-width: 375px){
                 width: 30px;
             }
           P{
              width:80px;
-             font-size:18px;
-             color: #FF6060;
+             font-size:$font-size-base;
+             color:$secondary-color;
              text-align: end;
              font-weight: 500; 
                @media screen and (max-width: 375px){
-                 font-size:12px;
+                 font-size:$font-size-secondary-medium;
                  text-align:end;    
                 }
             }
@@ -105,9 +112,10 @@
             }
         }
         .rate{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex-space-between;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
             padding: 10px 0px 0px 0px;  
             @media screen and (max-width: 375px){
                padding: 0px;    
