@@ -1,9 +1,6 @@
 @import '../../utils/all.scss';
 .header{
     @include flex-space-between;
-    // display: flex;
-    // justify-content:space-between;
-    // align-items: center;
     height: 68px;
     max-width: 95%;
     margin:30px; 
@@ -20,8 +17,6 @@
     }
     .nav-button {
         @include flex-space-between;
-        // display: flex;
-        // justify-content:space-between;
         width:25%;
         @media screen and (max-width: 768px){
             gap: 40px;

@@ -8,9 +8,6 @@
     background-position: center;
     overflow: hidden;
     @include flex-space-between;
-    // display: flex;
-    // align-items: center;
-    // justify-content:space-between;
     border-radius: 25px;
     background-repeat: no-repeat;
     @media screen and (max-width: 768px){
@@ -21,7 +18,7 @@
     }
     .svg-inline--fa{
     font-size:$font-size-xxlarge; 
-    color: $primary-color; 
+    color: $tertiary-color; 
     cursor: pointer;
     margin: 10px;
     @media screen and (max-width: 768px){

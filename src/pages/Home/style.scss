@@ -19,19 +19,15 @@
       gap: 20px;
     }
     .link {
-      width: calc(33.333% - 35px); /* Trois éléments par ligne avec espace (gap) pris en compte */
+      width: calc(33.333% - 35px); 
       height: 340px;
       object-fit: cover;
       object-position: center;
       @include flex(column, space-between);
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: space-between;
       @media screen and (max-width: 768px){
         width:100%;
         height:300px;
-        display:block;
-        
+        display:block; 
       }
       @media screen and (max-width: 375px){
        height: 255px;

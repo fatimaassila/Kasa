@@ -1,10 +1,6 @@
 @import '../../utils/all.scss';
 .error-container{
   @include flex(column, center,center);
-    // display: flex;
-    // flex-direction:column;
-    // justify-content: center;
-    // align-items: center;
     font-family:"Montserrat";
    .not-found{
     margin:5px;

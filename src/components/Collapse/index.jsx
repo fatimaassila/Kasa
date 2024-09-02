@@ -18,11 +18,9 @@ function Collapse({ title, content }) {
           <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp } />
         </div>
       </div>
-      {isOpen && (
-        <div className="description">
-          <p>{content}</p>
-        </div>
-      )}
+       <div className={`description ${isOpen ? 'open' : ''}`}>
+        <ul>{content}</ul>
+      </div>
     </div>
   )
 }

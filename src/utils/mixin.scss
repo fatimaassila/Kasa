@@ -4,17 +4,10 @@
     justify-content: $justify;
     align-items: $align;
   }
-//   @mixin flex-center {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//   }
   
   @mixin flex-column {
     display: flex;
     flex-direction: column;
-   
   }
 
   @mixin flex-space-between {
@@ -23,12 +16,9 @@
     align-items: center;
   }
   
-  
-  
   @mixin flex-end {
     display: flex;
     align-items: center;
     justify-content: end;
-
   }
   

@@ -1,32 +1,32 @@
 @import '../../utils/all.scss';
 .collapse {
   border-radius:10px;
+  border-bottom-left-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
   overflow: hidden;
-  transition: all 0.3s ease;
   width:75%;
   @media screen and (max-width: 768px){
     width:100%;
-  }
-  .collapse-content{
-    display:flex;
-    justify-content: center;
   }
   .description {
     background-color:$primary-color;
     color: $secondary-dark;
     font-size:$font-size-base;
-    padding:5px 5px 15px 20px;  
+    
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
     @media screen and (max-width: 375px){
       font-size:$font-size-medium;   
+    }
+    .ul{
+      padding:5px 5px 15px 20px;  
     }
   }
   .collapse-content {
     @include flex-space-between;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
     padding: 20px;
     background-color:$secondary-color;
     height: 25px;
@@ -46,16 +46,21 @@
       margin-left: 10px;
       cursor: pointer;
       font-size: $font-size-large;
-      color:$primary-color;
-      transition: transform 0.3s ease;
+      color:$tertiary-color;
+      transition: .33s ease-in-out;
       transform-origin: center;
       @media screen and (max-width: 375px){
         font-size:$font-size-base
       }
+      &.fa-chevron-down {
+        transition: all 1s;
+        transform: rotate(360deg);
+      }
     }
   } 
-  &.open .svg-inline--fa {
-      transform: rotate(180deg);
-       // La flèche sera tournée à 180 degrés quand le collapse est ouvert
-    }
+  .description.open {
+    max-height: 200px; 
+    opacity: 1;
+    padding:10px 5px 15px 20px;  
+  }
 }

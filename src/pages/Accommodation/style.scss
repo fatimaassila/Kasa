@@ -1,9 +1,6 @@
 @import '../../utils/all.scss';
 .accommodation{
     @include flex-column;
-//   display: flex;
-//  flex-direction: column;
-//  font-family:"Montserrat";
  margin: 30px;
     @media screen and (max-width: 768px){
      margin: 15px;
@@ -15,17 +12,12 @@
     font-size: $font-size-large;
     margin-top: 20px;
     @include flex-space-between;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
     @media screen and (max-width: 375px){
         flex-direction: column;
         align-items:normal;  
     }
     .info-container{
         @include flex-column;
-        // display: flex;
-        // flex-direction: column;
         font-family:"Montserrat";
         h1{
             font-size:$font-size-secondary-xlarge;
@@ -75,8 +67,6 @@
     }
     .host-tag{
         @include flex-column;
-    //  display: flex;
-    //  flex-direction: column;
        @media screen and (max-width: 375px){
          flex-direction:row-reverse;
          justify-content: space-between;
@@ -85,9 +75,6 @@
         }
         .host{
             @include flex-end;
-        //    display: flex;
-        //    align-items: center;
-        //    justify-content: end;
            gap: 10px;
             @media screen and (max-width: 375px){
                 width: 30px;
@@ -113,9 +100,6 @@
         }
         .rate{
             @include flex-space-between;
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
             padding: 10px 0px 0px 0px;  
             @media screen and (max-width: 375px){
                padding: 0px;    
