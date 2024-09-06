@@ -12,10 +12,10 @@ function Collapse({ title, content }) {
 
   return (
     <div className="collapse" >
-      <div className="collapse-content">
+      <div className="collapse-content" >
         <h2 className="title">{title}</h2>
-        <div onClick={display}>
-          <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp } />
+        <div className={`svg-inline--fa ${isOpen ? 'rotate' : ''}`} onClick={display}>
+          <FontAwesomeIcon icon={faChevronUp} />
         </div>
       </div>
        <div className={`description ${isOpen ? 'open' : ''}`}>

@@ -16,9 +16,19 @@
       @media screen and (max-width: 375px){
         height:255px;
       }
-}
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 73%, 0), hsla(0, 0%, 47%, 0), rgba(59, 59, 59, .459), rgba(0, 0, 0, .58));
+    // z-index: 1; 
+  }
 .card_title{
     position:absolute;
+    z-index: 2;
     bottom: 25px;
     left:10px;
     right: 20px;
@@ -31,6 +41,7 @@
 }
 .text{
     position:absolute;
+    z-index: 2;
     bottom: 10px;
     left:10px;
     right: 20px;
